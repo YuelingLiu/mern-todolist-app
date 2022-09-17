@@ -6,12 +6,14 @@ function App() {
   const [itemText, setItemText] = useState('');
 
   //add new to do item to database
-  const addItem = async () => {
+  const addItem = async (e) => {
+    e.preventDefault();
     try {
       const res = await axios.post('http://localhost:5500/api/item', {
         item: itemText,
       });
       console.log(res);
+      setItemText('');
     } catch (err) {
       console.log(err);
     }
@@ -19,7 +21,7 @@ function App() {
   return (
     <div className="App">
       <h1>Todo List</h1>
-      <form className="form">
+      <form className="form" onSubmit={(e) => addItem(e)}>
         <input
           type="text"
           placeholder="Add Todo Item"
