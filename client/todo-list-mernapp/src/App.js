@@ -6,6 +6,9 @@ function App() {
   const [itemText, setItemText] = useState('');
 
   //add new to do item to database
+
+  // add new todo item to database
+
   const addItem = async (e) => {
     e.preventDefault();
     try {

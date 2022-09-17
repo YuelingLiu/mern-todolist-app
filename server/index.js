@@ -11,7 +11,10 @@ const PORT = process.env.PORT || 5500;
 
 //use cors
 app.use(cors());
+<<<<<<< HEAD
 
+=======
+>>>>>>> 053cef907854b56914d9934071262d96057e7770
 //import routes
 const TodoItemRoute = require('./routes/Todoitems');
 

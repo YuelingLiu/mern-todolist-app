@@ -13,7 +13,7 @@ router.post('/api/item', async (req, res) => {
     //save this item to data base
     // and must use async await when dealing with promises and databse
     const saveItem = await newItem.save();
-    res.status(200).json('added item');
+    res.status(200).json('Added item successully');
   } catch (err) {
     res.json(err);
   }
